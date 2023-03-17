@@ -5,7 +5,7 @@
       "fullname": "محمد پیریان",
       "Expertise": "روانپزشک",
       "days": {
-        "شنبه": true,
+        "شنبه": false,
         "یک شنبه": false,
         "دو شنبه": false,
         "سه شنبه": false,
@@ -23,7 +23,7 @@
         "یک شنبه": false,
         "دو شنبه": false,
         "سه شنبه": false,
-        "چهار شنبه": false,
+        "چهار شنبه": true,
         "پنجشنبه": false,
         "جمعه": false
       }
@@ -53,7 +53,7 @@
         "سه شنبه": false,
         "چهار شنبه": false,
         "پنجشنبه": false,
-        "جمعه": true
+        "جمعه": false
       }
     },
     {
@@ -71,14 +71,5 @@
       }
     }
   ],
-  "patient": [
-    {
-      "name": "Laith Schultz",
-      "lastName": "Burgess",
-      "phone": "+1 (734) 722-4141",
-      "doctor": "مسعود محمدی",
-      "day": "یک شنبه",
-      "id": 1
-    }
-  ]
+  "patient": []
 }

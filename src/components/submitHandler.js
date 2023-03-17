@@ -1,25 +1,32 @@
-export const submitHandler = (e, doctorName, day, id,Expertise) => {
+export const submitHandler = async function (e, day, id) {
   e.preventDefault();
-
+  const getResponse = await fetch(`http://localhost:3002/doctors/${id}`);
+  const getData = await getResponse.json();
+  getData.days[day] = true;
+  console.log(getData);
   const formElements = {
     name: e.target.name.value,
     lastName: e.target.lastName.value,
     phone: e.target.phone.value,
-    doctor: doctorName,
+    doctor: getData.fullname,
     day: day,
   };
-  fetch(' http://localhost:3002/patient', {
+
+  await fetch(' http://localhost:3002/patient', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formElements),
   });
- 
 
-  // fetch(`http://localhost:3002/doctors/${id}`,{
-  //   method:'PUT',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body:
-  // })
+  await fetch(`http://localhost:3002/doctors/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(getData),
+  });
+  const modalDay = document.getElementById('modalDay');
+  modalDay.classList.toggle('hidden');
 };
 
 window.submitHandler = submitHandler;

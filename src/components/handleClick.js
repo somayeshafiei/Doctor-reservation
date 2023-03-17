@@ -35,7 +35,7 @@ export const handleClick = (event, day) => {
     <form
     action=""
     class="flex flex-col gap-2 bg-gray-2 rounded-md p-4 shadow mt-4"
-    onsubmit='submitHandler(event,"${data.fullname}","${day}","${data.id}","${data.Expertise}")'
+    onsubmit='submitHandler(event,"${day}","${data.id}")'
   >
     <div class="flex gap-4">
       <label for="">روز:</label>
