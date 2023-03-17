@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <title>Doctors</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <nav class="flex justify-between p-4 px-12 bg-gray-1 mb-8">
+      <div>
+        <img src="src/logo/logo.png" alt="" class="w-12" />
+      </div>
+      <div class="flex gap-8">
+        <button>تخصص ها</button>
+        <button>سوالات متداول</button>
+      </div>
+      <div>
+        <input
+          class="bg-gray-2 p-2 rounded-full"
+          type="text"
+          placeholder="جستجو ..."
+        />
+      </div>
+    </nav>
+    <div class="container w-screen">
+      <div
+        class="cardbox flex w-full gap-20 flex-wrap justify-center"
+        id="cardbox"
+      ></div>
+
+      <div
+        id="modalDay"
+        class="z-10 modal w-screen h-screen absolute top-0 flex justify-center items-center backdrop-blur-sm hidden"
+      >
+        <div
+          id="modal"
+          class="z-20 flex flex-col p-8 justify-center w-6/12 bg-gray-1 rounded-xl gap-20 shadow-lg"
+        >
+          <div class="wrapperContent">
+            <div class="flex gap-12 items-center">
+              <div
+                class="flex justify-center items-center bg-gray-3 w-20 h-20 rounded-full"
+              >
+                <img src="src/icon/icons8-user-30.png" class="w-12" alt="" />
+              </div>
+              <div>
+                <ul>
+                  <li class="flex gap-16">
+                    <p>نام:</p>
+                    <p>محمد</p>
+                  </li>
+                  <li class="flex gap-8">
+                    <p>تخصص:</p>
+                    <p>مریض</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-8">
+              <form
+                action=""
+                class="flex flex-col gap-2 bg-gray-2 rounded-md p-4 shadow mt-4"
+              >
+                <div class="flex gap-4">
+                  <label for="">روز:</label>
+                  <label for="">شنبه</label>
+                </div>
+                <div class="flex flex-wrap gap-8">
+                  <div class="flex flex-col gap-1">
+                    <label for="">نام بیمار:</label>
+                    <input type="text" class="p-2 px-8 rounded-md bg-gray-3" />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <label for="">نام خانوادگی بیمار:</label>
+                    <input type="text" class="p-2 px-8 rounded-md bg-gray-3" />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <label for="">شماره همراه بیمار:</label>
+                    <input type="text" class="p-2 px-16 rounded-md bg-gray-3" />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-gray-3 rounded-md p-2 w-60 mx-auto mt-4"
+                >
+                  ثبت رزرو
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function x() {
+        console.log('jtaskjdg;');
+      }
+    </script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
